@@ -1,7 +1,11 @@
+---
+name: react-declarative-analyzer
+description: Scans the provided React file (JSX/TSX) and suggests refactoring imperative logic into declarative patterns.
+---
+
 # React Declarative Analyzer
 
 **Trigger Command:** `/analyze-declarative`
-**Purpose:** Scans the provided React file (JSX/TSX) and suggests refactoring imperative logic into declarative patterns.
 
 ## Instructions for the Agent
 * Scan the target file strictly for imperative programming patterns.

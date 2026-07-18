@@ -19,3 +19,8 @@ Most AI agents struggle with context limits. If you feed an LLM a massive task w
 To ensure users can easily pull these skills down via CLI, use the following command:
 
 `npx skills@latest add jericbas/skills` 
+
+
+`npx skills@latest add jericbas/skills -a github-copilot`
+
+`npx skills@latest add jericbas/skills -a claude-code`

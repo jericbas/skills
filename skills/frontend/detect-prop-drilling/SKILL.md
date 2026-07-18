@@ -1,7 +1,11 @@
+---
+name: detect-prop-drilling
+description: Uses react-docgen to extract React component props and detect unnecessary prop drilling through intermediate components.
+---
+
 # Prop Drilling Detector
 
 **Trigger Command:** `/detect-prop-drilling`
-**Purpose:** Uses react-docgen to extract React component props into a structured JSON file, preventing the AI from wasting context window tokens on raw logic.
 
 ## Instructions for the Agent
 * Target the provided React component files.
