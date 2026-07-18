@@ -8,11 +8,14 @@ Most AI agents struggle with context limits. If you feed an LLM a massive task w
 
 ## The Skills List
 
-| Skill | File Name | Description |
+
+
+| Skill | Location | Description |
 | :--- | :--- | :--- |
-| **Prop Drilling Detector** | `detect-prop-drilling.md` | Uses `react-docgen` to extract React component props into a structured JSON file, preventing the AI agent from wasting context window tokens on raw logic. |
-| **Declarative Analyzer** | `react-declarative-analyzer.md` | Scans target React files strictly for imperative programming patterns like manual DOM manipulations and provides declarative code refactors. |
-| **Test Failure Resolver** | `test-failure-resolver.md` | Tracks down test failures using a visualizer like `depcruise` or `madge` and version control to bypass finger-pointing and route the issue to the person with the freshest context. |
+| **Prop Drilling Detector** | `skills/react/detect-prop-drilling/SKILL.md` | Analyzes React component trees to identify props passed through multiple layers without being used, and suggests Context API or composition-based refactors. |
+| **React Declarative Analyzer** | `skills/react/react-declarative-analyzer/SKILL.md` | Scans React components for imperative patterns such as manual DOM work or unnecessary effects and recommends declarative state-driven alternatives. |
+| **React SRP/DRY Analyzer** | `skills/react/react-srp-dry-analyzer/SKILL.md` | Reviews components for SRP and DRY violations and suggests smaller components or hooks to improve composition and reuse. |
+| **Test Failure Resolver** | `skills/ci/test-failure-resolver/SKILL.md` | Helps trace failing tests by inspecting dependencies and recent changes, then routes the issue to the most relevant developer without blame. |
 
 ## CLI Installation Instructions
 
