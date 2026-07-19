@@ -17,6 +17,10 @@ Most AI agents struggle with context limits. If you feed an LLM a massive task w
 | **React SRP/DRY Analyzer** | `skills/react/react-srp-dry-analyzer/SKILL.md` | Reviews components for SRP and DRY violations and suggests smaller components or hooks to improve composition and reuse. |
 | **Test Failure Resolver** | `skills/ci/test-failure-resolver/SKILL.md` | Helps trace failing tests by inspecting dependencies and recent changes, then routes the issue to the most relevant developer without blame. |
 
+## Tech Debt / TODO
+
+- Add Codex/OpenAI agent metadata to each skill so they are discoverable and consistent across tooling.
+
 ## CLI Installation Instructions
 
 To ensure users can easily pull these skills down via CLI, use the following command:
