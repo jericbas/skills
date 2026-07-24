@@ -5,6 +5,12 @@ set +e # Disable exit-on-error so we can count all failures
 ERROR_COUNT=0
 TARGET_DIR="skills" # <-- Define your target directory here
 
+node tools/skills-sh-json.js "$TARGET_DIR" >/dev/null 2>&1
+if [ $? -ne 0 ]; then
+  echo "❌ Failed: could not generate skills.sh.json"
+  ERROR_COUNT=$((ERROR_COUNT + 1))
+fi
+
 echo "🔍 Validating SKILL.md files in the '$TARGET_DIR' directory..."
 
 # Safety check: If the directory doesn't exist, skip the check successfully

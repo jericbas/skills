@@ -1,8 +1,12 @@
 {
   "devDependencies": {
+    "eslint": "^9.16.1",
     "husky": "^9.1.7"
   },
   "scripts": {
-    "prepare": "husky"
+    "prepare": "husky",
+    "generate:skills-sh": "node tools/skills-sh-json.js",
+    "lint:skills": "eslint tools/skills-sh-json.js tools/skills-sh-json.test.js",
+    "test:skills": "node --test tools/skills-sh-json.test.js"
   }
 }

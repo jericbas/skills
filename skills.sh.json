@@ -1,0 +1,41 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "CI",
+      "description": "Skills for ci workflows.",
+      "skills": [
+        "test-failure-resolver"
+      ]
+    },
+    {
+      "title": "Graphify",
+      "description": "Skills for graphify workflows.",
+      "skills": [
+        "graphify-agents",
+        "graphify-map",
+        "graphify-patch",
+        "graphify-review",
+        "graphify-setup"
+      ]
+    },
+    {
+      "title": "Madge",
+      "description": "Skills for madge workflows.",
+      "skills": [
+        "madge-cli",
+        "madge-setup"
+      ]
+    },
+    {
+      "title": "React",
+      "description": "Skills for react workflows.",
+      "skills": [
+        "detect-prop-drilling",
+        "react-declarative-analyzer",
+        "react-srp-dry-analyzer"
+      ]
+    }
+  ]
+}
