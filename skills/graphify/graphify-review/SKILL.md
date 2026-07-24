@@ -10,6 +10,10 @@ metadata:
     related_skills: [graphify-patch]
 ---
 
+## Install
+Run:
+`npx skills add jericbas/skills --skill graphify-review`
+
 # Review Graphify Impact
 
 **Trigger Command:** `/graphify-review`

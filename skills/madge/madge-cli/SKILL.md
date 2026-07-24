@@ -9,6 +9,11 @@ metadata:
   category: ci
   related_skills: [madge-setup]
 ---
+
+## Install
+Run:
+`npx skills add jericbas/skills --skill madge-cli`
+
 # /madge
 
 ## Instructions for the Agent:

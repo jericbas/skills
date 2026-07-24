@@ -3,6 +3,10 @@ name: detect-prop-drilling
 description: Uses react-docgen to extract React component props and detect unnecessary prop drilling through intermediate components.
 ---
 
+## Install
+Run:
+`npx skills add jericbas/skills --skill detect-prop-drilling`
+
 # Prop Drilling Detector
 
 **Trigger Command:** `/detect-prop-drilling`

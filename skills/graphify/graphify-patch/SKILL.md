@@ -10,6 +10,10 @@ metadata:
     related_skills: [graphify-map, graphify-review]
 ---
 
+## Install
+Run:
+`npx skills add jericbas/skills --skill graphify-patch`
+
 # Apply Ontology Patch
 
 **Trigger Command:** `/graphify-patch`

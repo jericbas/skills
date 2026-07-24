@@ -3,6 +3,10 @@ name: test-failure-resolver
 description: Tracks down test failures using a visualizer and version control to bypass finger-pointing and route the issue to the right person.
 ---
 
+## Install
+Run:
+`npx skills add jericbas/skills --skill test-failure-resolver`
+
 # Test Failure Resolver
 
 **Trigger Command:** `/resolve-test-failure`

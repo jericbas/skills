@@ -10,6 +10,10 @@ metadata:
     related_skills: []
 ---
 
+## Install
+Run:
+`npx skills add jericbas/skills --skill graphify-agents`
+
 # Track Agent Stats
 
 **Trigger Command:** `/graphify-agents`

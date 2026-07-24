@@ -3,6 +3,10 @@ name: react-srp-dry-analyzer
 description: Scans the provided React component and identifies SRP/DRY violations, then suggests refactors into smaller components or custom hooks.
 ---
 
+## Install
+Run:
+`npx skills add jericbas/skills --skill react-srp-dry-analyzer`
+
 # React SRP/DRY Analyzer
 
 **Trigger Command:** `/analyze-srp-dry`

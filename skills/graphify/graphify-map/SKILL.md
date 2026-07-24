@@ -10,6 +10,10 @@ metadata:
     related_skills: [graphify-setup, graphify-patch]
 ---
 
+## Install
+Run:
+`npx skills add jericbas/skills --skill graphify-map`
+
 # Map Graphify Feature
 
 **Trigger Command:** `/graphify-map`

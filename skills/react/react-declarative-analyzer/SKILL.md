@@ -3,6 +3,10 @@ name: react-declarative-analyzer
 description: Scans the provided React file (JSX/TSX) and suggests refactoring imperative logic into declarative patterns.
 ---
 
+## Install
+Run:
+`npx skills add jericbas/skills --skill react-declarative-analyzer`
+
 # React Declarative Analyzer
 
 **Trigger Command:** `/analyze-declarative`
