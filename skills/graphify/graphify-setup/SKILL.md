@@ -10,7 +10,7 @@ metadata:
     related_skills: [graphify-map]
 ---
 
-## Installx
+## Install
 Run:
 `npx skills add jericbas/skills --skill graphify-setup`
 
