@@ -10,6 +10,15 @@
       ]
     },
     {
+      "title": "Depcruise",
+      "description": "Skills for depcruise workflows.",
+      "skills": [
+        "depcruise",
+        "depcruise-run",
+        "depcruise-setup"
+      ]
+    },
+    {
       "title": "Graphify",
       "description": "Skills for graphify workflows.",
       "skills": [
