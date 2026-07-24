@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "apply-ontology-patch": {
+      "source": "jericbas/skills",
+      "sourceType": "github",
+      "skillPath": "skills/graphify/apply-ontology-patch/SKILL.md",
+      "computedHash": "1a5e9ba62518dd124ea6660958e9a90eba75e280a1821f1060766752b33cd202"
+    }
+  }
+}
