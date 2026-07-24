@@ -18,12 +18,30 @@ while IFS= read -r file; do
   
   # Extract the parent directory name
   PARENT_DIR=$(basename "$(dirname "$file")")
-  EXPECTED_TEXT=$(printf '## Install\nRun:\n`npx skills add jericbas/skills --skill %s`' "$PARENT_DIR")
 
-  # Search for the exact string in the file
-  if ! grep -Fq "$EXPECTED_TEXT" "$file"; then
+  # Validate the install block as an exact three-line sequence
+  if ! python3 - "$file" "$PARENT_DIR" <<'PY'
+import pathlib
+import sys
+
+file_path = sys.argv[1]
+parent_dir = sys.argv[2]
+expected_lines = [
+    "## Install",
+    "Run:",
+    f"`npx skills add jericbas/skills --skill {parent_dir}`",
+]
+
+lines = pathlib.Path(file_path).read_text().splitlines()
+for start in range(len(lines) - len(expected_lines) + 1):
+    if lines[start:start + len(expected_lines)] == expected_lines:
+        raise SystemExit(0)
+
+raise SystemExit(1)
+PY
+  then
     echo "❌ Failed: $file"
-    echo "   Missing: \"$EXPECTED_TEXT\""
+    echo "   Missing expected install block"
     ERROR_COUNT=$((ERROR_COUNT + 1))
   else
     echo "✅ Passed: $file"
