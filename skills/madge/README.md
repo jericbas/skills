@@ -7,7 +7,7 @@ Madge is an incredibly powerful tool for visualizing and debugging dependency gr
 | Trigger Command | Skill Folder | Purpose |
 | --- | --- | --- |
 | `/madge-setup` | `madge-setup` | Asks the user for their execution preference (global vs. npx) and handles Graphviz installation for image generation. |
-| `/madge` | `madge-cli` | Acts as a comprehensive wrapper for the Madge CLI to check circular dependencies, orphans, and leaves. |
+| `/madge` | `madge` | Acts as a comprehensive wrapper for the Madge CLI to check circular dependencies, orphans, and leaves. |
 
 ## Workflow Example
 

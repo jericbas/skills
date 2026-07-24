@@ -12,13 +12,13 @@ metadata:
 
 ## Install
 Run:
-`npx skills add jericbas/skills --skill madge-cli`
+`npx skills add jericbas/skills --skill madge`
 
 # /madge
 
 ## Instructions for the Agent:
 
-1. Determine the user's execution environment. Ask if they are using `npx madge` or a globally installed `madge` command if it is not already known.
+1. Determine the user's execution environment. Ask if they are using `npx madge` or a globally installed `madge` command if it is not already known. If Madge is not installed or not configured for the project, direct the user to run `/madge-setup` first.
 2. Ask the user which specific CLI analysis they want to perform on their target file or directory. Offer the following capabilities:
    - **List Dependencies**: Standard dependency tree listing.
    - **Circular Dependencies**: Detect circular loops using `--circular`.

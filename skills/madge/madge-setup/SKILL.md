@@ -7,7 +7,7 @@ metadata:
   hermes:
     tags: [Dependencies, Madge, Setup, Architecture]
   category: ci
-  related_skills: [madge-cli]
+  related_skills: [madge]
 ---
 
 ## Install

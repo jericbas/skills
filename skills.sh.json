@@ -33,7 +33,7 @@
       "title": "Madge",
       "description": "Skills for madge workflows.",
       "skills": [
-        "madge-cli",
+        "madge",
         "madge-setup"
       ]
     },
