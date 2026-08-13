@@ -10,8 +10,10 @@ To properly retrofit a legacy codebase for Spec-Driven Development, the `/genera
 
 By untangling the legacy logic directory-by-directory, the AI generates pristine, SDD-compliant `spec.md` files that can be used to safely refactor or extend the legacy code later.
 
-## Handling Specification Collisions
-When generating specs iteratively, there is a risk of **Specification Collision** (e.g., the newly generated Auth spec contradicts an existing Database spec). To prevent this, the skill includes a strict **Adjacency Check**. Before generating a new document, the AI will ask if there are any existing, related specs it should read first to ensure cross-module architectural alignment.
+## Handling Collisions & Partial Documentation (DRY Docs)
+When generating specs iteratively, there is a risk of **Specification Collision** (e.g., the newly generated Auth spec contradicts an existing Database spec) or **Redundancy** (rewriting what is already in a legacy README). 
+
+To prevent this, the skill includes a strict **Adjacency Check**. Before generating a new document, the AI will ask for paths to related specs OR existing partial documentation. The AI is instructed to use Markdown links to reference existing docs rather than duplicating their content.
 
 ## References & Guidelines
 This skill's architecture and SDD rules are directly inspired by the following industry standards and research:
@@ -29,7 +31,7 @@ This skill's architecture and SDD rules are directly inspired by the following i
 
 ## How to Use It
 1. Run `/generate-retro-spec` in your agent chat.
-2. **Target Input:** Provide the target directory (e.g., `src/legacy-auth/`).
+2. **Target Input:** Provide the target directory or file (e.g., `src/legacy-auth/` or `src/utils.js`).
 3. **Target Output:** Provide the save location (e.g., `./docs/specs/`).
-4. **Adjacency Check:** Provide paths to any existing specs that the new code interacts with to prevent conflicts.
-5. **Execution:** The AI generates a conflict-free, human-reviewable Markdown specification.
+4. **Adjacency Check:** Provide paths to any existing specs OR partial documentation (like an old README).
+5. **Execution:** The AI generates a minimal, DRY, human-reviewable Markdown specification.
