@@ -1,11 +1,11 @@
 ---
 name: generate-retro-spec
-description: Reverse-engineers legacy code into strict, DRY, SDD-compliant Markdown specifications.
+description: Reverse-engineers legacy code into strict, DRY, SDD-compliant Markdown specifications using a root index and standardized child templates.
 disable-model-invocation: true
 license: MIT
 metadata:
   hermes:
-    tags: [Documentation, Spec-Driven, Reverse-Engineering, Architecture, SDD]
+    tags: [Documentation, Spec-Driven, Reverse-Engineering, Architecture, SDD, Graphify]
 ---
 
 ## Install
@@ -14,34 +14,35 @@ Run:
 
 # Trigger Command: /generate-retro-spec
 
-**Purpose:** Interactively scans undocumented legacy code and reverse-engineers it into a structured, SDD-compliant Markdown specification while actively preventing cross-module architectural conflicts and redundant documentation.
+**Purpose:** Interactively scans undocumented legacy code and reverse-engineers it into a structured, SDD-compliant Markdown specification. It uses a root `spec.md` as an index and generates standardized child files (`spec-[name].md`). It prioritizes reading a local `tmp/.retro-spec-config.json` file to bypass manual data entry, integrates `/graphify` for dependency mapping, and actively prevents cross-module architectural conflicts.
 
 ## Instructions for the Agent:
 
-1. **Step 1: Get Target Input Directory or File**
-   * Ask the user: "Which specific directory or file path needs to be analyzed? (e.g., `src/legacy/utils/` or `src/components/Button.tsx`)"
-   * **Wait for user input.** Do not proceed to the next step until a path is provided.
-   * *Note: The Target Input can be a single file OR an entire directory. If it is a directory, analyze all child files within it to understand their collective purpose. If available, suggest using `/graphify` to identify relevant files for the target.*
+1. **Step 1: Configuration Pre-Flight Check**
+   * Scan the repository root for a configuration file located at `tmp/.retro-spec-config.json`.
+   * If the file exists, read the `targetInput` (code to scan) and `targetOutputDir` (where specs live). Acknowledge these paths to the user and skip to Step 3.
+   * If the file does not exist, or if the necessary values are missing, proceed to Step 2.
 
-2. **Step 2: Get Target Output Directory**
-   * Ask the user: "Where should I save the generated `spec.md` file? (e.g., `./docs/specs/` to commit, or a private `./.local-specs/` folder?)"
-   * **Wait for user input.** Do not proceed to the next step until a path is provided.
+2. **Step 2: Manual Target Inputs (Fallback)**
+   * Ask the user: "Which specific directory or file path needs to be analyzed? (e.g., `src/legacy/utils/`)"
+   * Wait for user input.
+   * Ask the user: "What is the root specification directory where the index `spec.md` lives? (e.g., `./docs/specs/`)"
+   * Wait for user input. Do not proceed until both paths are established.
 
-3. **Step 3: The Adjacency & Legacy Docs Check**
-   * Ask the user: "Are there any existing, related specification files I should align with? OR, is there any existing partial documentation (like a legacy `README.md`) for this module? Provide their paths so I can link to them and avoid redundancy. If none, reply 'none'."
-   * **Wait for user input.** Do not proceed until the user provides related paths or says "none."
+3. **Step 3: The Adjacency, Legacy Docs & Graphify Check**
+   * Ask the user: "Would you like me to scan the repository for existing, related specification files or partial documentation (like a legacy `README.md`)? Alternatively, you can provide their specific paths so I can align with them. If you want to skip this, reply 'none'."
+   * **Graphify Integration:** Check if the `/graphify` skill is available. If yes, automatically suggest using it: "I see `/graphify` is available. Shall I use it to map out the dependencies and adjacent files for your target input to build better context?"
+   * Wait for user input. If the user agrees, execute those actions before moving to Step 4.
 
 4. **Step 4: Code Analysis & SDD Generation**
-   * Read the code in the Target Input (including all child files if a directory was provided).
-   * If the user provided adjacent files in Step 3, read them now. 
-   * Untangle the logic and draft the new `spec.md` document. 
-   * **You MUST adhere to the following Spec-Driven Development (SDD) Rules:**
-     * **The "Source of Truth" Rule (Based on [Tom Preston-Werner's README-Driven Development](https://tom.preston-werner.com/2010/08/23/readme-driven-development.html)):** You must clearly define the core business intent and "Why" of the module before explaining the technical "How". The spec is the contract; the code is an implementation of that contract.
-     * **The DRY Documentation Rule:** If the user provided an existing partial document (like an old README), DO NOT duplicate its content. Use markdown links (e.g., `[See Legacy Config Docs](./legacy-readme.md)`) to reference the existing info, and only document the missing logic or new constraints.
-     * **Prioritize Human Reviewability:** Do not write a monolithic block of text. Use strict bullet points, clear inputs/outputs, and defined edge cases so a human can review it in under 60 seconds.
-     * **Start Minimal:** Strip away irrelevant technical trivia or formatting quirks. Document the core constraints, state changes, and API contracts.
+   * Read the code in the Target Input (including all child files if a directory).
+   * Review `/graphify` output (if utilized) and read any adjacent files/docs identified in Step 3.
+   * Determine a URL-safe, kebab-case name for the new specification based on the module (e.g., if analyzing a Button component, use `button-component`).
+   * **Template Extraction:** Locate and read the official SDD template at `templates/sdd-template.md`.
+   * Draft the new specification document by strictly filling out the exact structure, headers, and bullet points defined in that template. Do not hallucinate new sections.
 
-5. **Step 5: Execution**
-   * Save the generated SDD document to the Target Output Directory provided in Step 2.
-   * If any minor conflicts were detected and resolved during Step 4, briefly inform the user in your output message.
-   * If the user chose a private/local folder, remind them to add it to their `.gitignore`.
+5. **Step 5: Execution & Root Linking**
+   * Save the drafted document as `spec-[name].md` inside the established `targetOutputDir`.
+   * Open the root `spec.md` file located in that same directory.
+   * Append a markdown link to the newly created `spec-[name].md` inside the root `spec.md` file so it acts as an updated index.
+   * Inform the user of completion, listing the files created/modified.
