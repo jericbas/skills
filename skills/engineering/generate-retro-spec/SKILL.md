@@ -39,10 +39,15 @@ Run:
    * Review `/graphify` output (if utilized) and read any adjacent files/docs identified in Step 3.
    * Determine a URL-safe, kebab-case name for the new specification based on the module (e.g., if analyzing a Button component, use `button-component`).
    * **Template Extraction:** Locate and read the official SDD template at [SDD-TEMPLATE.md](templates/SDD-TEMPLATE.md).
-   * Draft the new specification document by strictly filling out the exact structure, headers, and bullet points defined in that template. Do not hallucinate new sections.
+      * Draft the new specification document by strictly filling out the exact structure, headers, and bullet points defined in that template. Do not hallucinate new sections.
+      * Write a `Plain-language summary` (2–4 short sentences) at the top of the spec that explains the module to non-technical readers.
+      * Add an `Examples (input → output)` section with at least one concrete example showing expected behavior in everyday language.
+      * Include a `Technical specification (structured)` section that contains the original SDD headings (Intent & Context, The Core Contract, Strict Constraints & Rules, Critical Dependencies, Edge Cases & Error Handling, Definition of Done). For each heading, provide a 1–2 sentence plain-language explanation followed by a `Technical notes` block with exact schemas, error codes, and implementation details.
 
 5. **Step 5: Execution & Root Linking**
    * Save the drafted document as `spec-[name].md` inside the established `targetOutputDir`.
    * Open the root `spec.md` file located in that same directory.
    * Append a markdown link to the newly created `spec-[name].md` inside the root `spec.md` file so it acts as an updated index.
-   * Inform the user of completion, listing the files created/modified.
+      * Ensure the saved `spec-[name].md` includes the `Plain-language summary` and `Examples` sections so non-technical stakeholders can read it easily.
+      * Ensure the saved `spec-[name].md` also includes the `Technical specification (structured)` section so engineers have precise, testable details.
+      * Inform the user of completion, listing the files created/modified and include the plain-language summary in the completion message.
