@@ -19,6 +19,13 @@
       ]
     },
     {
+      "title": "Engineering",
+      "description": "Skills for engineering workflows.",
+      "skills": [
+        "generate-retro-spec"
+      ]
+    },
+    {
       "title": "Graphify",
       "description": "Skills for graphify workflows.",
       "skills": [
@@ -44,6 +51,13 @@
         "detect-prop-drilling",
         "react-declarative-analyzer",
         "react-srp-dry-analyzer"
+      ]
+    },
+    {
+      "title": "Strategy",
+      "description": "Skills for strategy workflows.",
+      "skills": [
+        "apply-master-strategy"
       ]
     }
   ]
