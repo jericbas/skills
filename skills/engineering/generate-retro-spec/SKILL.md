@@ -38,7 +38,7 @@ Run:
    * Read the code in the Target Input (including all child files if a directory).
    * Review `/graphify` output (if utilized) and read any adjacent files/docs identified in Step 3.
    * Determine a URL-safe, kebab-case name for the new specification based on the module (e.g., if analyzing a Button component, use `button-component`).
-   * **Template Extraction:** Locate and read the official SDD template at `templates/sdd-template.md`.
+   * **Template Extraction:** Locate and read the official SDD template at [SDD-TEMPLATE.md](templates/SDD-TEMPLATE.md).
    * Draft the new specification document by strictly filling out the exact structure, headers, and bullet points defined in that template. Do not hallucinate new sections.
 
 5. **Step 5: Execution & Root Linking**
