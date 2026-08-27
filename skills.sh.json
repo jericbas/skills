@@ -45,6 +45,13 @@
       ]
     },
     {
+      "title": "Personal",
+      "description": "Skills for personal workflows.",
+      "skills": [
+        "teachme"
+      ]
+    },
+    {
       "title": "React",
       "description": "Skills for react workflows.",
       "skills": [
