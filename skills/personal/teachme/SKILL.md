@@ -19,18 +19,19 @@ Run:
 **Instructions for the Agent:**
 
 1. **Step 1: Configuration Pre-Flight Check**
-   * Search the active working directory and its parent directories for `.teachme-config.json` (it may not be located at the workspace root).
-   * **If it does not exist:** Halt execution immediately. Ask the user what skill they want to learn and where they want to create `.teachme-config.json`.
-   * **Recommendation:** If they want a clean, git-friendly setup, recommend placing it in a dedicated working directory such as `./.teachme/` or `./.local/teachme/` and keeping generated lesson/artifact folders under that same area. If they prefer a simpler setup, placing it in the project root is also acceptable.
-   * Create the config file in the chosen location with all target directories defaulting relative to that config file (`./lessons/`, `./assets/`, `./learning-records/`, `./reference/`). Generate a `MISSION.md` file capturing their overarching goal based on their response before proceeding.
-   * **If it exists:** Read the configured directory paths, which may be relative to the config file’s location. Acknowledge the setup and proceed to Step 2.
+   * Search the entire repository, including parent directories if needed, for exactly one `.teachme-config.json`. There must be only one active config for the whole repo.
+   * **If a config already exists:** Do not create a second one. Parse the file immediately and validate that it is valid JSON and correctly configured. Ensure the required paths for `lessons`, `assets`, `learning-records`, and `reference` are present and valid, and that any relative paths resolve correctly from the config file’s directory. If the JSON is malformed or incomplete, repair it in place or ask the user for the correct values before continuing.
+   * **If multiple configs are found:** Treat it as a setup issue. Ask which config is canonical, keep only one, and remove or consolidate duplicates before proceeding.
+   * **If no config exists:** Ask the user what skill or concept they want to learn and where they want to store the single teaching workspace. Prefer a dedicated repo-local directory such as `./.teachme/` or `./.local/teachme/` and create only one config there. Default the target directories relative to the config file itself (`./lessons/`, `./assets/`, `./learning-records/`, `./reference/`). Generate a `MISSION.md` file capturing their overarching goal based on the response before proceeding.
+   * Acknowledge the active repo configuration and continue to Step 2 without creating duplicate config files.
 
 2. **Step 2: Context & Zone of Proximal Development**
    * Read `MISSION.md` and any existing files in the configured `learning-records/` directory (e.g., `0001-<name>.md`).
    * Determine the most relevant, sprint-sized concept to teach next based on the user's mission and previous struggles.
 
 3. **Step 3: Generate the Lesson**
-   * Create a single, self-contained, beautiful HTML lesson in the configured `lessons/` directory.
+   * Generate a single, self-contained, beautiful HTML lesson in the configured `lessons/` directory based on the user’s exact query and the mission.
+   * If there is already an existing lesson in the configured `lessons/` directory that covers the same topic or a prerequisite concept, prefer linking to or extending that lesson rather than creating duplicate content. Where possible, create a short next-step lesson that references the earlier lesson and explains the relationship.
    * Focus only on the required knowledge to acquire the specific skill.
    * Recommend a primary, high-trust external source for the user to review.
 
