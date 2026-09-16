@@ -66,6 +66,13 @@
       "skills": [
         "apply-master-strategy"
       ]
+    },
+    {
+      "title": "Team",
+      "description": "Skills for team workflows.",
+      "skills": [
+        "repo-onboarding"
+      ]
     }
   ]
 }
