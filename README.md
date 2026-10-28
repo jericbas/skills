@@ -12,8 +12,6 @@ Most AI agents struggle with context limits. If you feed an LLM a massive task w
 
 | Skill | Location | Description |
 | :--- | :--- | :--- |
-| **Prop Drilling Detector** | `skills/react/detect-prop-drilling/SKILL.md` | Analyzes React component trees to identify props passed through multiple layers without being used, and suggests Context API or composition-based refactors. |
-| **React Declarative Analyzer** | `skills/react/react-declarative-analyzer/SKILL.md` | Scans React components for imperative patterns such as manual DOM work or unnecessary effects and recommends declarative state-driven alternatives. |
 | **React SRP/DRY Analyzer** | `skills/react/react-srp-dry-analyzer/SKILL.md` | Reviews components for SRP and DRY violations and suggests smaller components or hooks to improve composition and reuse. |
 | **Test Failure Resolver** | `skills/ci/test-failure-resolver/SKILL.md` | Helps trace failing tests by inspecting dependencies and recent changes, then routes the issue to the most relevant developer without blame. |
 

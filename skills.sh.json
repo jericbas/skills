@@ -55,8 +55,6 @@
       "title": "React",
       "description": "Skills for react workflows.",
       "skills": [
-        "detect-prop-drilling",
-        "react-declarative-analyzer",
         "react-srp-dry-analyzer"
       ]
     },

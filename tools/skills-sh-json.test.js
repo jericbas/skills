@@ -8,7 +8,7 @@ test('collectSkillEntries groups skills by top-level skill folder', () => {
 
   assert.ok(entries.length > 0);
   assert.ok(entries.some((entry) => entry.slug === 'test-failure-resolver'));
-  assert.ok(entries.some((entry) => entry.slug === 'detect-prop-drilling'));
+  assert.ok(entries.some((entry) => entry.slug === 'react-srp-dry-analyzer'));
 });
 
 test('buildSkillsShConfig creates a valid skills.sh.json structure', () => {
