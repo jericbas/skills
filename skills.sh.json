@@ -70,6 +70,7 @@
       "title": "Team",
       "description": "Skills for team workflows.",
       "skills": [
+        "daily-standup",
         "repo-onboarding",
         "sprint-retro-wins"
       ]

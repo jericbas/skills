@@ -12,7 +12,7 @@ metadata:
   hermes:
     tags: [Agile, Retrospective, Sprint, Git, Team, Productivity]
     category: team
-    related_skills: []
+    related_skills: [daily-standup]
 ---
 
 ## Install
