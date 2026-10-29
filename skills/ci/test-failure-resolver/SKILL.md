@@ -26,5 +26,5 @@ Run:
 * Check `package.json` to see if tests exist.
 * Run unit tests, or ask the user to provide the failed test file.
 * If a test fails, use the `/depcruise` or `/madge` skills to map and check the dependencies of the failed unit test.
-* Use `git log` or `git blame` to check who was the last person to touch those specific files.
-* Assign the issue back to the developer who made the recent changes, as they have the freshest context, ensuring the tone does not assign blame.
+* Use `git log` or `git blame` only as context about recent changes. File authorship is not proof of cause, ownership, or availability.
+* Summarize the evidence and likely context owners for human confirmation. Do not assign or route the issue to a developer without an explicit team ownership source or the user's direction, and keep the language non-blaming.

@@ -18,11 +18,11 @@ npx skills@latest add jericbas/skills
 
 | Trigger Command | Skill Folder | Purpose |
 | --- | --- | --- |
-| `/graphify-setup` | `setup-graphify` | Safely installs the Graphify CLI, sets up agent integrations, and builds the initial local graph. |
-| `/graphify-map` | `map-graphify-feature` | Queries `.graphify/graph.json` to map out exact files needed for a feature. Halts before coding to prevent context bloat. |
-| `/graphify-patch` | `apply-ontology-patch` | Safely manages canonical entities using the strict Patch Lifecycle (Validate -> Dry-Run -> Apply). |
-| `/graphify-review` | `review-graphify-impact` | Analyzes staged files for blast radius and test gaps before a commit. |
-| `/graphify-agents` | `track-agent-stats` | Parses local transcripts to track token usage and attribute work to the current AI session. |
+| `/graphify-setup` | `graphify-setup` | Safely installs the Graphify CLI, sets up agent integrations, and builds the initial local graph. |
+| `/graphify-map` | `graphify-map` | Queries the project graph to map out relevant files for a feature before coding. |
+| `/graphify-patch` | `graphify-patch` | Safely manages canonical entities using the strict Patch Lifecycle (Validate -> Dry-Run -> Apply). |
+| `/graphify-review` | `graphify-review` | Analyzes changed files for graph impact and test gaps before a commit. |
+| `/graphify-agents` | `graphify-agents` | Parses local transcripts to track token usage and attribute work to the current AI session. |
 
 ## The Ontology Patch Lifecycle
 

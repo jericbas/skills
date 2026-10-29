@@ -28,8 +28,8 @@ Run:
 
 1. **Step 1: Configuration Pre-Flight Check**
    * Search the entire repository, including parent directories if needed, for exactly one `.teachme-config.json`. There must be only one active config for the whole repo.
-   * **If a config already exists:** Do not create a second one. Parse the file immediately and validate that it is valid JSON and correctly configured. Ensure the required paths for `lessons`, `assets`, and `reference` are present and valid, and that any relative paths resolve correctly from the config file’s directory. If the JSON is malformed or incomplete, repair it in place or ask the user for the correct values before continuing.
-   * **If multiple configs are found:** Treat it as a setup issue. Ask which config is canonical, keep only one, and remove or consolidate duplicates before proceeding.
+   * **If a config already exists:** Do not create a second one. Parse the file immediately and validate that it is valid JSON and correctly configured. Ensure the required paths for `lessons`, `assets`, and `reference` are present and valid, and that any relative paths resolve correctly from the config file’s directory. If the JSON is malformed or incomplete, explain the issue and ask before changing the existing file.
+   * **If multiple configs are found:** Treat it as a setup issue. Ask which config is canonical and wait for confirmation. Never remove, overwrite, or consolidate user configuration files without explicit approval.
    * **If no config exists:** Ask the user what skill or concept they want to learn and where they want to store the single teaching workspace. Prefer a dedicated repo-local directory such as `./.teachme/` or `./.local/teachme/` and create only one config there. Default the target directories relative to the config file itself (`./lessons/`, `./assets/`, `./reference/`). Generate a `MISSION.md` file capturing their overarching goal based on the response before proceeding.
    * Acknowledge the active repo configuration and continue to Step 2 without creating duplicate config files.
 

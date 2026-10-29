@@ -61,7 +61,7 @@ Run:
      - **Staged, unstaged, and untracked changes:** Explicitly frame these as **in progress / still working on** (never phrase uncommitted or staged files as already finished). For example:
        - Bullet: *"Still working on adding form validation to the checkout page (in progress)."*
        - Verbal: *"Today I'm still working on..."* or *"Right now I have changes in progress for..."*
-     - If there are no commits today and the working tree is completely clean, infer the logical next step from the most recent commit on the branch (or state that the branch work looks ready for PR/review).
+   - If there are no commits today and the working tree is completely clean, state that no current work is visible in Git. Do not infer the user's next task or claim the branch is ready for review without evidence; ask what they plan to work on if a today's update is needed.
 
 ### Step 4: Output Format (Chat-First)
 Output directly in the chat response (do not create files in the repo unless requested). Structure the response as follows:

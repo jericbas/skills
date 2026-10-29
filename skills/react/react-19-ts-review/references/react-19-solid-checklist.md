@@ -16,10 +16,10 @@ function TextInput({ ref, ...props }: ComponentProps<'input'>) {
   return (
     <input
       ref={(node) => {
-        if (typeof ref === 'function') ref(node);
-        else if (ref) ref.current = node;
+        if (typeof ref === 'function') return ref(node);
+        if (ref) ref.current = node;
         return () => {
-          // Optional React 19 ref cleanup
+          if (ref) ref.current = null;
         };
       }}
       {...props}
