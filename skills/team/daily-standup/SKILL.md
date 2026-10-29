@@ -56,9 +56,11 @@ Run:
    * Write all bullet points and talking points in **intermediate English** by default—using simple, clear, everyday words that are easy to read aloud and understand across an international team. Avoid heavy jargon or stiff corporate phrasing unless the user explicitly asks for a different level (e.g., beginner/simple, advanced/executive, or native casual).
 2. **Focus on Outcomes & Current Momentum:**
    * **Yesterday (or Last Active Day):** Summarize completed commits into cohesive outcomes rather than listing raw file names or commit hashes.
-   * **Today (Committed + In Progress):** Combine any commits made today with the current staged/uncommitted working tree changes to clearly describe:
-     - What you have already finished today (if any commits exist today).
-     - What you are actively building, fixing, or testing right now based on staged/uncommitted changes.
+   * **Today (Distinguish Completed Today vs. Still Working On):**
+     - **Commits made today:** Describe as completed earlier today.
+     - **Staged, unstaged, and untracked changes:** Explicitly frame these as **in progress / still working on** (never phrase uncommitted or staged files as already finished). For example:
+       - Bullet: *"Still working on adding form validation to the checkout page (in progress)."*
+       - Verbal: *"Today I'm still working on..."* or *"Right now I have changes in progress for..."*
      - If there are no commits today and the working tree is completely clean, infer the logical next step from the most recent commit on the branch (or state that the branch work looks ready for PR/review).
 
 ### Step 4: Output Format (Chat-First)
@@ -68,7 +70,7 @@ Output directly in the chat response (do not create files in the repo unless req
    * A compact 1-line header: `**Branch(es):** <branch> | **Author:** <name> | **Working Tree:** <staged/unstaged summary>`
 2. **📋 Daily Standup Notes (Copy-Paste Ready for Slack / Jira / Teams):**
    * **✅ Yesterday (or Last Active Day — `<date>`):** Short, clear 1-line bullet points of what was completed.
-   * **🔨 Today (In Progress):** Short, clear 1-line bullet points covering today's commits plus active work detected in staged/uncommitted changes.
+   * **🔨 Today (Completed Today & Still Working On):** Short, clear 1-line bullet points. Explicitly label staged/uncommitted changes as **`[In Progress]`** or phrase them as **"Still working on..."** so teammates know the task is ongoing and not yet committed.
    * **🚧 Blockers / Follow-ups:** Default to `None` unless uncommitted changes clearly show unfinished TODOs, broken tests, or pending migrations worth mentioning.
 3. **🗣️ Verbal Standup Talking Points (For the Meeting):**
    * A natural, first-person conversational script (2–4 sentences in **intermediate English**, starting with *"Yesterday I..."* and *"Today I'm working on..."*) that the developer can read aloud smoothly during the daily standup.
