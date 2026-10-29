@@ -1,6 +1,10 @@
 ---
 name: graphify-review
-description: 'Checks the blast radius, impacted communities, and test gaps of changed files before a commit.'
+description: >-
+  Analyzes staged or modified files to check blast radius, impacted communities,
+  and missing test coverage before a commit. Use when reviewing git changes for
+  architectural impact with Graphify.
+trigger: /graphify-review
 disable-model-invocation: true
 license: MIT
 metadata:

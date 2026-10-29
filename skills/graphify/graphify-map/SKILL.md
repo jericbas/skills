@@ -1,6 +1,10 @@
 ---
 name: graphify-map
-description: 'Gathers context and builds a strict execution map for a new feature using the local Graphify knowledge graph to prevent context bloat.'
+description: >-
+  Queries the local Graphify knowledge graph to map exact files, entities, and
+  dependencies needed for a new feature without context bloat. Use before coding
+  a feature to scope which files need to be modified.
+trigger: /graphify-map
 disable-model-invocation: true
 license: MIT
 metadata:

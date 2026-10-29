@@ -1,6 +1,9 @@
 ---
 name: depcruise-setup
-description: 'Installs dependency-cruiser and initializes the configuration file.'
+description: >-
+  Installs dependency-cruiser and initializes the .dependency-cruiser.js
+  configuration file. Use when setting up dependency-cruiser for the first time
+  or configuring Graphviz for dependency graph generation.
 trigger: /depcruise-setup
 disable-model-invocation: true
 license: MIT

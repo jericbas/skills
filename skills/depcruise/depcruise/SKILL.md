@@ -1,6 +1,9 @@
 ---
-name: depcruise-orchestrator
-description: 'Meta-skill that acts as the entry point for Dependency Cruiser, routing the user to either setup or execution.'
+name: depcruise
+description: >-
+  Acts as the orchestrator entry point for Dependency Cruiser, checking project
+  state and routing the user to either setup or dependency analysis. Use when the
+  user asks to audit module dependencies, find circular imports, or run depcruise.
 trigger: /depcruise
 disable-model-invocation: true
 license: MIT

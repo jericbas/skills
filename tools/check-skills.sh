@@ -25,29 +25,66 @@ while IFS= read -r file; do
   # Extract the parent directory name
   PARENT_DIR=$(basename "$(dirname "$file")")
 
-  # Validate the install block as an exact three-line sequence
+  # Validate YAML frontmatter (name matches parent_dir, third-person description with "Use when", and install block)
   if ! python3 - "$file" "$PARENT_DIR" <<'PY'
 import pathlib
+import re
 import sys
 
 file_path = sys.argv[1]
 parent_dir = sys.argv[2]
+text = pathlib.Path(file_path).read_text()
+lines = text.splitlines()
+
+# 1. Check YAML frontmatter boundaries
+if not lines or lines[0].strip() != "---":
+    print("   Missing opening YAML frontmatter '---'", file=sys.stderr)
+    raise SystemExit(1)
+
+end_idx = None
+for idx in range(1, len(lines)):
+    if lines[idx].strip() == "---":
+        end_idx = idx
+        break
+
+if end_idx is None:
+    print("   Missing closing YAML frontmatter '---'", file=sys.stderr)
+    raise SystemExit(1)
+
+frontmatter = "\n".join(lines[1:end_idx])
+
+# 2. Check kebab-case 'name' matches parent folder (https://antigravity.google/docs/skills/)
+name_match = re.search(r"^name:\s*(.+)$", frontmatter, re.MULTILINE)
+if not name_match:
+    print("   Missing required 'name' field in frontmatter", file=sys.stderr)
+    raise SystemExit(1)
+
+skill_name = name_match.group(1).strip().strip("'\"")
+if skill_name != parent_dir:
+    print(f"   Frontmatter name '{skill_name}' does not match directory '{parent_dir}'", file=sys.stderr)
+    raise SystemExit(1)
+
+# 3. Check required 'description' field in frontmatter
+if not re.search(r"^description:\s*", frontmatter, re.MULTILINE):
+    print("   Missing required 'description' field in frontmatter", file=sys.stderr)
+    raise SystemExit(1)
+
+# 4. Validate the install block as an exact three-line sequence
 expected_lines = [
     "## Install",
     "Run:",
     f"`npx skills add jericbas/skills --skill {parent_dir}`",
 ]
 
-lines = pathlib.Path(file_path).read_text().splitlines()
 for start in range(len(lines) - len(expected_lines) + 1):
     if lines[start:start + len(expected_lines)] == expected_lines:
         raise SystemExit(0)
 
+print("   Missing expected install block", file=sys.stderr)
 raise SystemExit(1)
 PY
   then
     echo "❌ Failed: $file"
-    echo "   Missing expected install block"
     ERROR_COUNT=$((ERROR_COUNT + 1))
   else
     echo "✅ Passed: $file"

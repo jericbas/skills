@@ -1,13 +1,17 @@
 ---
 name: madge-setup
-description: 'Safely sets up Madge for dependency visualization. Checks for global vs npx preference and Graphviz.'
+description: >-
+  Configures Madge for dependency analysis by confirming global vs. npx execution
+  and checking Graphviz system requirements. Use when setting up Madge for the
+  first time or troubleshooting missing Graphviz SVG errors.
+trigger: /madge-setup
 disable-model-invocation: true
 license: MIT
 metadata:
   hermes:
     tags: [Dependencies, Madge, Setup, Architecture]
-  category: ci
-  related_skills: [madge]
+    category: ci
+    related_skills: [madge]
 ---
 
 ## Install

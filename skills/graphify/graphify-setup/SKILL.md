@@ -1,6 +1,10 @@
 ---
 name: graphify-setup
-description: 'Checks for and safely installs the Graphify CLI and assistant integrations, then builds the initial graph.'
+description: >-
+  Checks for and safely installs the Graphify CLI and assistant integrations, then
+  builds the initial knowledge graph. Use when setting up Graphify in a repository
+  for the first time.
+trigger: /graphify-setup
 disable-model-invocation: true
 license: MIT
 metadata:

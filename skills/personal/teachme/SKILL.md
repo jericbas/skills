@@ -1,11 +1,17 @@
 ---
 name: teachme
-description: Teaches a skill through Binary Diagnostics, forcing 100% success-rate retrieval practice before logging mastery.
+description: >-
+  Teaches a technical skill or concept over multiple sessions using sprint-sized
+  HTML lessons and retrieval checks. Use when the user wants interactive tutoring,
+  structured lessons, or guided mastery of a topic.
+trigger: /teachme
 disable-model-invocation: true
 license: MIT
 metadata:
   hermes:
     tags: [Mentorship, Mastery, Interactive Learning, Diagnostics, Hansei]
+    category: personal
+    related_skills: []
 ---
 
 ## Install

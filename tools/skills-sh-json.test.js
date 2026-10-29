@@ -8,6 +8,7 @@ test('collectSkillEntries groups skills by top-level skill folder', () => {
 
   assert.ok(entries.length > 0);
   assert.ok(entries.some((entry) => entry.slug === 'test-failure-resolver'));
+  assert.ok(entries.some((entry) => entry.slug === 'react-19-ts-review'));
   assert.ok(entries.some((entry) => entry.slug === 'react-srp-dry-analyzer'));
 });
 

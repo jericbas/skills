@@ -1,11 +1,18 @@
 ---
 name: repo-onboarding
-description: Educates new programmers on any application's purpose, workflow, and architecture using simple English, text flowcharts, and clear uncertainty flags.
+description: >-
+  Generates a beginner-friendly repository onboarding guide explaining the
+  application's purpose, architecture flowcharts, business logic, and glossary.
+  Use when onboarding a new developer or documenting how a codebase works in
+  plain English.
+trigger: /onboard
 disable-model-invocation: true
 license: MIT
 metadata:
   hermes:
     tags: [Onboarding, Documentation, Architecture, Team]
+    category: team
+    related_skills: [graphify-map]
 ---
 
 ## Install

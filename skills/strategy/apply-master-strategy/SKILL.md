@@ -1,11 +1,18 @@
 ---
 name: apply-master-strategy
-description: A master strategist decision-making engine that filters logic through power dynamics, operational constraints, and mastery gates.
+description: >-
+  Evaluates strategic decisions and recommends actionable plans by filtering
+  problems through Mastery Gates, operational constraints, and power dynamics.
+  Use when the user asks for strategic planning, post-mortem reflection, or
+  high-leverage decision analysis.
+trigger: /apply-master-strategy
 disable-model-invocation: true
 license: MIT
 metadata:
   hermes:
     tags: [Strategy, Masterclass, Framework, personal]
+    category: strategy
+    related_skills: []
 ---
 
 ## Install

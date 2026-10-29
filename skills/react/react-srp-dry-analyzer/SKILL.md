@@ -1,6 +1,18 @@
 ---
 name: react-srp-dry-analyzer
-description: Scans the provided React component and identifies SRP/DRY violations, then suggests refactors into smaller components or custom hooks.
+description: >-
+  Scans a React component to identify Single Responsibility Principle (SRP) and
+  DRY violations, then suggests refactors into smaller composable components or
+  custom hooks. Use when refactoring bloated React components or extracting
+  reusable hooks.
+trigger: /analyze-srp-dry
+disable-model-invocation: true
+license: MIT
+metadata:
+  hermes:
+    tags: [React, SRP, DRY, Refactoring, SOLID, Architecture]
+    category: react
+    related_skills: [react-19-ts-review]
 ---
 
 ## Install

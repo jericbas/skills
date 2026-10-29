@@ -1,13 +1,17 @@
 ---
-name: madge-cli
-description: 'Comprehensive wrapper for Madge CLI. Detects circular dependencies, orphans, leaves, and generates visual dependency graphs.'
+name: madge
+description: >-
+  Wraps the Madge CLI to detect circular dependencies, find orphaned or leaf
+  modules, and generate visual dependency graphs. Use when the user asks to
+  analyze module imports or visualize dependency trees with Madge.
+trigger: /madge
 disable-model-invocation: true
 license: MIT
 metadata:
   hermes:
     tags: [Dependencies, Madge, CLI, Graph, Circular]
-  category: ci
-  related_skills: [madge-setup]
+    category: ci
+    related_skills: [madge-setup]
 ---
 
 ## Install

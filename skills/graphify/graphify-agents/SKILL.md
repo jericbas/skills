@@ -1,6 +1,10 @@
 ---
 name: graphify-agents
-description: 'Parses local CLI transcripts and accurately attributes work packages and commits to specific AI sessions.'
+description: >-
+  Parses local CLI transcripts to track token usage, session duration, and
+  attribute commits to specific AI sessions. Use when auditing or logging AI
+  agent session statistics with Graphify.
+trigger: /graphify-agents
 disable-model-invocation: true
 license: MIT
 metadata:

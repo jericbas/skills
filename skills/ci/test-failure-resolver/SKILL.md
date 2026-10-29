@@ -1,6 +1,9 @@
 ---
 name: test-failure-resolver
-description: Investigates failing tests and routes the issue to the right developer using dependency and history context.
+description: >-
+  Investigates failing unit tests and routes the issue to the relevant developer
+  using dependency graphs and git history context. Use when unit tests fail in CI
+  or locally and the user wants to trace the root cause and recent file authors.
 trigger: /resolve-test-failure
 disable-model-invocation: true
 license: MIT

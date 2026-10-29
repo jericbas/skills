@@ -1,6 +1,10 @@
 ---
 name: graphify-patch
-description: 'Manages the reviewable patch lifecycle (validate -> dry-run -> apply) for canonical entities safely without directly mutating derived files.'
+description: >-
+  Manages the reviewable patch lifecycle (validate, dry-run, apply) for canonical
+  Graphify entities safely without directly mutating derived files. Use when
+  updating or patching ontology entities in the knowledge graph.
+trigger: /graphify-patch
 disable-model-invocation: true
 license: MIT
 metadata:

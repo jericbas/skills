@@ -1,6 +1,9 @@
 ---
 name: depcruise-run
-description: 'Comprehensive CLI wrapper for dependency-cruiser to validate rules, find circular dependencies, and generate graphs.'
+description: >-
+  Executes dependency-cruiser CLI commands to validate architectural rules, detect
+  circular dependencies or orphans, and generate visual SVG/HTML dependency graphs.
+  Use when running dependency-cruiser scans on a configured repository.
 trigger: /depcruise-run
 disable-model-invocation: true
 license: MIT
