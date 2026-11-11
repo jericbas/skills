@@ -25,7 +25,7 @@ while IFS= read -r file; do
   # Extract the parent directory name
   PARENT_DIR=$(basename "$(dirname "$file")")
 
-  # Validate YAML frontmatter (name matches parent_dir, third-person description with "Use when", and install block)
+  # Validate YAML frontmatter (name matches parent_dir and description is present)
   if ! python3 - "$file" "$PARENT_DIR" <<'PY'
 import pathlib
 import re
@@ -69,19 +69,7 @@ if not re.search(r"^description:\s*", frontmatter, re.MULTILINE):
     print("   Missing required 'description' field in frontmatter", file=sys.stderr)
     raise SystemExit(1)
 
-# 4. Validate the install block as an exact three-line sequence
-expected_lines = [
-    "## Install",
-    "Run:",
-    f"`npx skills add jericbas/skills --skill {parent_dir}`",
-]
-
-for start in range(len(lines) - len(expected_lines) + 1):
-    if lines[start:start + len(expected_lines)] == expected_lines:
-        raise SystemExit(0)
-
-print("   Missing expected install block", file=sys.stderr)
-raise SystemExit(1)
+raise SystemExit(0)
 PY
   then
     echo "❌ Failed: $file"

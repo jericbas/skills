@@ -1,22 +1,8 @@
 ---
 name: graphify-patch
-description: >-
-  Manages the reviewable patch lifecycle (validate, dry-run, apply) for canonical
-  Graphify entities safely without directly mutating derived files. Use when
-  updating or patching ontology entities in the knowledge graph.
-trigger: /graphify-patch
+description: Manages the reviewable patch lifecycle (validate, dry-run, apply) for canonical Graphify entities safely without directly mutating derived files. Use when updating or patching ontology entities in the knowledge graph.
 disable-model-invocation: true
-license: MIT
-metadata:
-  hermes:
-    tags: [Graphify, Ontology, Patching, Data]
-    category: data
-    related_skills: [graphify-map, graphify-review]
 ---
-
-## Install
-Run:
-`npx skills add jericbas/skills --skill graphify-patch`
 
 # Apply Ontology Patch
 

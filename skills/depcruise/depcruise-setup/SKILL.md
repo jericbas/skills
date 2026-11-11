@@ -1,22 +1,8 @@
 ---
 name: depcruise-setup
-description: >-
-  Installs dependency-cruiser and initializes the .dependency-cruiser.js
-  configuration file. Use when setting up dependency-cruiser for the first time
-  or configuring Graphviz for dependency graph generation.
-trigger: /depcruise-setup
+description: Installs dependency-cruiser and initializes the .dependency-cruiser.js configuration file. Use when setting up dependency-cruiser for the first time or configuring Graphviz for dependency graph generation.
 disable-model-invocation: true
-license: MIT
-metadata:
-  hermes:
-    tags: [Dependency Cruiser, Architecture, Setup, CLI]
-    category: architecture
-    related_skills: [depcruise, depcruise-run]
 ---
-
-## Install
-Run:
-`npx skills add jericbas/skills --skill depcruise-setup`
 
 # /depcruise-setup
 

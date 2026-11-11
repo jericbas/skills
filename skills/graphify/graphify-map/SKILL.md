@@ -1,22 +1,8 @@
 ---
 name: graphify-map
-description: >-
-  Queries the local Graphify knowledge graph to map exact files, entities, and
-  dependencies needed for a new feature without context bloat. Use before coding
-  a feature to scope which files need to be modified.
-trigger: /graphify-map
+description: Queries the local Graphify knowledge graph to map exact files, entities, and dependencies needed for a new feature without context bloat. Use before coding a feature to scope which files need to be modified.
 disable-model-invocation: true
-license: MIT
-metadata:
-  hermes:
-    tags: [Graphify, Context, Planning, Architecture, Knowledge Graph]
-    category: productivity
-    related_skills: [graphify-setup, graphify-patch]
 ---
-
-## Install
-Run:
-`npx skills add jericbas/skills --skill graphify-map`
 
 # Map Graphify Feature
 

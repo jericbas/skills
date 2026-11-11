@@ -67,8 +67,8 @@ Use this structure when creating a new skill:
 ```md
 ---
 name: example-skill
-description: A short description of what this skill does.
-license: MIT
+description: A short description of what this skill does. Use when the user asks for the task this skill covers.
+disable-model-invocation: true
 ---
 
 # Example Skill
@@ -80,10 +80,6 @@ Describe the purpose of the skill in one or two sentences.
 - Explain the main task this skill helps with.
 - List the key steps or decision points the agent should follow.
 - Mention any relevant tools, files, or commands.
-
-## Install
-
-Run:
-
-`npx skills add jericbas/skills --skill example-skill`
 ```
+
+Omit `disable-model-invocation: true` for skills the model should be able to invoke on its own.

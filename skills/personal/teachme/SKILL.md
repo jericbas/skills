@@ -1,22 +1,8 @@
 ---
 name: teachme
-description: >-
-  Teaches a technical skill or concept over multiple sessions using sprint-sized
-  HTML lessons and retrieval checks. Use when the user wants interactive tutoring,
-  structured lessons, or guided mastery of a topic.
-trigger: /teachme
+description: Teaches a technical skill or concept over multiple sessions using sprint-sized HTML lessons and retrieval checks. Use when the user wants interactive tutoring, structured lessons, or guided mastery of a topic.
 disable-model-invocation: true
-license: MIT
-metadata:
-  hermes:
-    tags: [Mentorship, Mastery, Interactive Learning, Diagnostics, Hansei]
-    category: personal
-    related_skills: []
 ---
-
-## Install
-Run:
-`npx skills add jericbas/skills --skill teachme`
 
 **Trigger Command:** `/teachme`
 

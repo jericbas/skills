@@ -1,24 +1,8 @@
 ---
 name: daily-standup
-description: >-
-  Scans yesterday's (or the most recent) git commits, today's commits, and current
-  staged or uncommitted changes on the active branch (or specified branches) to
-  generate a human-friendly daily standup update in intermediate English. Use when
-  preparing for a daily standup, writing a daily Slack status, or recalling what
-  you worked on yesterday and what is in progress today.
-trigger: /standup
+description: Scans yesterday's (or the most recent) git commits, today's commits, and current staged or uncommitted changes on the active branch (or specified branches) to generate a human-friendly daily standup update in intermediate English. Use when preparing for a daily standup, writing a daily Slack status, or recalling what you worked on yesterday and what is in progress today.
 disable-model-invocation: true
-license: MIT
-metadata:
-  hermes:
-    tags: [Agile, Standup, Daily Update, Git, Team, Productivity]
-    category: team
-    related_skills: [sprint-retro-wins]
 ---
-
-## Install
-Run:
-`npx skills add jericbas/skills --skill daily-standup`
 
 # Daily Standup & Today's Task Generator
 
