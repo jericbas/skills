@@ -1,0 +1,11 @@
+{
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "bootstrap-sha": "0ff3361de37267472f760e1d47508419b1e3384d",
+  "packages": {
+    ".": {
+      "release-type": "simple",
+      "package-name": "jericbas-skills",
+      "include-component-in-tag": false
+    }
+  }
+}
