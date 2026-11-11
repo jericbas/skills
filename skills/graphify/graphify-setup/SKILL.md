@@ -1,22 +1,8 @@
 ---
 name: graphify-setup
-description: >-
-  Checks for and safely installs the Graphify CLI and assistant integrations, then
-  builds the initial knowledge graph. Use when setting up Graphify in a repository
-  for the first time.
-trigger: /graphify-setup
+description: Checks for and safely installs the Graphify CLI and assistant integrations, then builds the initial knowledge graph. Use when setting up Graphify in a repository for the first time.
 disable-model-invocation: true
-license: MIT
-metadata:
-  hermes:
-    tags: [Graphify, Setup, Knowledge Graph, CLI]
-    category: setup
-    related_skills: [graphify-map]
 ---
-
-## Install
-Run:
-`npx skills add jericbas/skills --skill graphify-setup`
 
 # Setup Graphify
 

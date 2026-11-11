@@ -1,23 +1,8 @@
 ---
 name: react-19-ts-review
-description: >-
-  Reviews React 19 and TypeScript branch diffs against a confirmed base branch
-  using React 19 standards, core React principles, and layer-scoped SOLID rules.
-  Use when the user asks to review a React 19 TypeScript project, pull request,
-  or branch changes.
-trigger: /review-react-19
+description: Reviews React 19 and TypeScript branch diffs against a confirmed base branch using React 19 standards, core React principles, and layer-scoped SOLID rules. Use when the user asks to review a React 19 TypeScript project, pull request, or branch changes.
 disable-model-invocation: true
-license: MIT
-metadata:
-  hermes:
-    tags: [React, React 19, TypeScript, Code Review, SOLID, Git, Graphify]
-    category: react
-    related_skills: [react-srp-dry-analyzer, graphify-review, depcruise]
 ---
-
-## Install
-Run:
-`npx skills add jericbas/skills --skill react-19-ts-review`
 
 # React 19 + TypeScript Branch Reviewer
 
@@ -98,4 +83,3 @@ Consult [react-19-solid-checklist.md](./references/react-19-solid-checklist.md) 
 2. **React 19 Standards & Feature Opportunities:** List any legacy patterns (`forwardRef`, `<Context.Provider>`, manual form state) and where React 19 features (`use`, `useActionState`, `useFormStatus`, `useOptimistic`, ref cleanup, native metadata) can simplify the code.
 3. **React Principles & SOLID Findings:** Group issues by severity (`🔴 Critical`, `🟡 Suggestion`, `🟢 Nit/Praise`) with `file:line` references, the specific principle violated (`SRP`, `OCP`, `LSP`, `ISP`, `DIP [non-component]`, or `Declarative React`), and concise **Before vs. After** TypeScript code snippets.
 4. **Halt & Next Steps:** Ask the user which findings they would like you to apply automatically.
-

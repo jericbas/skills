@@ -1,22 +1,8 @@
 ---
 name: depcruise-run
-description: >-
-  Executes dependency-cruiser CLI commands to validate architectural rules, detect
-  circular dependencies or orphans, and generate visual SVG/HTML dependency graphs.
-  Use when running dependency-cruiser scans on a configured repository.
-trigger: /depcruise-run
+description: Executes dependency-cruiser CLI commands to validate architectural rules, detect circular dependencies or orphans, and generate visual SVG/HTML dependency graphs. Use when running dependency-cruiser scans on a configured repository.
 disable-model-invocation: true
-license: MIT
-metadata:
-  hermes:
-    tags: [Dependency Cruiser, Architecture, Validation, CLI, Graphing]
-    category: architecture
-    related_skills: [depcruise, depcruise-setup]
 ---
-
-## Install
-Run:
-`npx skills add jericbas/skills --skill depcruise-run`
 
 # /depcruise-run
 

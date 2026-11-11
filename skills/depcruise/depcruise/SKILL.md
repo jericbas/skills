@@ -1,22 +1,8 @@
 ---
 name: depcruise
-description: >-
-  Acts as the orchestrator entry point for Dependency Cruiser, checking project
-  state and routing the user to either setup or dependency analysis. Use when the
-  user asks to audit module dependencies, find circular imports, or run depcruise.
-trigger: /depcruise
+description: Acts as the orchestrator entry point for Dependency Cruiser, checking project state and routing the user to either setup or dependency analysis. Use when the user asks to audit module dependencies, find circular imports, or run depcruise.
 disable-model-invocation: true
-license: MIT
-metadata:
-  hermes:
-    tags: [Dependency Cruiser, Architecture, Meta-Skill]
-    category: architecture
-    related_skills: [depcruise-setup, depcruise-run]
 ---
-
-## Install
-Run:
-`npx skills add jericbas/skills --skill depcruise`
 
 # /depcruise
 

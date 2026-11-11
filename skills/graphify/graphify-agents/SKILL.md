@@ -1,22 +1,8 @@
 ---
 name: graphify-agents
-description: >-
-  Parses local CLI transcripts to track token usage, session duration, and
-  attribute commits to specific AI sessions. Use when auditing or logging AI
-  agent session statistics with Graphify.
-trigger: /graphify-agents
+description: Parses local CLI transcripts to track token usage, session duration, and attribute commits to specific AI sessions. Use when auditing or logging AI agent session statistics with Graphify.
 disable-model-invocation: true
-license: MIT
-metadata:
-  hermes:
-    tags: [Graphify, Analytics, Agents, Tracking]
-    category: analytics
-    related_skills: []
 ---
-
-## Install
-Run:
-`npx skills add jericbas/skills --skill graphify-agents`
 
 # Track Agent Stats
 

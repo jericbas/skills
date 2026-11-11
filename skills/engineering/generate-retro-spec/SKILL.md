@@ -1,22 +1,8 @@
 ---
 name: generate-retro-spec
-description: >-
-  Reverse-engineers undocumented or legacy code into structured, DRY, SDD-compliant
-  Markdown specifications using a root index and standardized child templates.
-  Use when documenting existing modules or generating specs for legacy code.
-trigger: /generate-retro-spec
+description: Reverse-engineers undocumented or legacy code into structured, DRY, SDD-compliant Markdown specifications using a root index and standardized child templates. Use when documenting existing modules or generating specs for legacy code.
 disable-model-invocation: true
-license: MIT
-metadata:
-  hermes:
-    tags: [Documentation, Spec-Driven, Reverse-Engineering, Architecture, SDD, Graphify]
-    category: engineering
-    related_skills: [graphify-map]
 ---
-
-## Install
-Run:
-`npx skills add jericbas/skills --skill generate-retro-spec`
 
 # Trigger Command: /generate-retro-spec
 

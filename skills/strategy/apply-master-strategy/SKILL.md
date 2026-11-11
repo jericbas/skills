@@ -1,23 +1,8 @@
 ---
 name: apply-master-strategy
-description: >-
-  Evaluates strategic decisions and recommends actionable plans by filtering
-  problems through Mastery Gates, operational constraints, and power dynamics.
-  Use when the user asks for strategic planning, post-mortem reflection, or
-  high-leverage decision analysis.
-trigger: /apply-master-strategy
+description: Evaluates strategic decisions and recommends actionable plans by filtering problems through Mastery Gates, operational constraints, and power dynamics. Use when the user asks for strategic planning, post-mortem reflection, or high-leverage decision analysis.
 disable-model-invocation: true
-license: MIT
-metadata:
-  hermes:
-    tags: [Strategy, Masterclass, Framework, personal]
-    category: strategy
-    related_skills: []
 ---
-
-## Install
-Run:
-`npx skills add jericbas/skills --skill apply-master-strategy`
 
 # Trigger Command: /apply-master-strategy
 

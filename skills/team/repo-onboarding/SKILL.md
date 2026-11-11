@@ -1,23 +1,8 @@
 ---
 name: repo-onboarding
-description: >-
-  Generates a beginner-friendly repository onboarding guide explaining the
-  application's purpose, architecture flowcharts, business logic, and glossary.
-  Use when onboarding a new developer or documenting how a codebase works in
-  plain English.
-trigger: /onboard
+description: Generates a beginner-friendly repository onboarding guide explaining the application's purpose, architecture flowcharts, business logic, and glossary. Use when onboarding a new developer or documenting how a codebase works in plain English.
 disable-model-invocation: true
-license: MIT
-metadata:
-  hermes:
-    tags: [Onboarding, Documentation, Architecture, Team]
-    category: team
-    related_skills: [graphify-map]
 ---
-
-## Install
-Run:
-`npx skills add jericbas/skills --skill repo-onboarding`
 
 **Trigger Command:** `/onboard`
 

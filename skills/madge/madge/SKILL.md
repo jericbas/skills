@@ -1,22 +1,8 @@
 ---
 name: madge
-description: >-
-  Wraps the Madge CLI to detect circular dependencies, find orphaned or leaf
-  modules, and generate visual dependency graphs. Use when the user asks to
-  analyze module imports or visualize dependency trees with Madge.
-trigger: /madge
+description: Wraps the Madge CLI to detect circular dependencies, find orphaned or leaf modules, and generate visual dependency graphs. Use when the user asks to analyze module imports or visualize dependency trees with Madge.
 disable-model-invocation: true
-license: MIT
-metadata:
-  hermes:
-    tags: [Dependencies, Madge, CLI, Graph, Circular]
-    category: ci
-    related_skills: [madge-setup]
 ---
-
-## Install
-Run:
-`npx skills add jericbas/skills --skill madge`
 
 # /madge
 

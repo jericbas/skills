@@ -1,23 +1,8 @@
 ---
 name: sprint-retro-wins
-description: >-
-  Scans git commits from the last 2 weeks on a target branch (or multiple branches)
-  and generates human-friendly "What went well in this sprint" talking points and
-  retro board notes. Use when preparing for a sprint retrospective or summarizing
-  recent personal or team accomplishments.
-trigger: /retro-wins
+description: Scans git commits from the last 2 weeks on a target branch (or multiple branches) and generates human-friendly "What went well in this sprint" talking points and retro board notes. Use when preparing for a sprint retrospective or summarizing recent personal or team accomplishments.
 disable-model-invocation: true
-license: MIT
-metadata:
-  hermes:
-    tags: [Agile, Retrospective, Sprint, Git, Team, Productivity]
-    category: team
-    related_skills: [daily-standup]
 ---
-
-## Install
-Run:
-`npx skills add jericbas/skills --skill sprint-retro-wins`
 
 # Sprint Retro "What Went Well" Generator
 
@@ -76,4 +61,3 @@ Output the result directly in the chat response (do not create or modify files i
    * Written so the user can copy-paste individual bullets directly onto Miro, FigJam, Jira, Retrium, or Slack retro boards under **"What went well?"**.
 3. **🗣️ Verbal Talking Points (For the Retro Meeting):**
    * A natural, conversational first-person summary (*"I..."* by default, or *"We..."* if `--team` was used) in 1–2 short paragraphs written in **intermediate English** (unless another level is requested) so the developer can read it aloud comfortably when sharing what went well this sprint.
-

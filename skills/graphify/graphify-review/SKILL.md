@@ -1,22 +1,8 @@
 ---
 name: graphify-review
-description: >-
-  Analyzes staged or modified files to check blast radius, impacted communities,
-  and missing test coverage before a commit. Use when reviewing git changes for
-  architectural impact with Graphify.
-trigger: /graphify-review
+description: Analyzes staged or modified files to check blast radius, impacted communities, and missing test coverage before a commit. Use when reviewing git changes for architectural impact with Graphify.
 disable-model-invocation: true
-license: MIT
-metadata:
-  hermes:
-    tags: [Graphify, Review, Impact, Git]
-    category: ci
-    related_skills: [graphify-patch]
 ---
-
-## Install
-Run:
-`npx skills add jericbas/skills --skill graphify-review`
 
 # Review Graphify Impact
 
