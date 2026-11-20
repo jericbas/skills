@@ -49,9 +49,18 @@ Use after installing or updating a skill to maintain visibility.
 ### 4. Mode 4: Deprecation & Retirement (`retire`)
 Use when a skill is superseded, redundant, or unused.
 1. **Removal:**
-   - Remove the skill directory from the workspace:
+   - Uninstall through the CLI (works on every platform):
      ```bash
+     npx skills remove [skill-name]
+     ```
+   - If the skill was added by hand, delete its directory instead:
+     ```bash
+     # Linux / macOS (POSIX)
      rm -rf [path-to-skill]
+     ```
+     ```powershell
+     # Windows (PowerShell)
+     Remove-Item -Recurse -Force "[path-to-skill]"
      ```
 2. **Update Tracker:**
    - Set status in `SKILLS_TRACKER.md` to `Retired` with date and reason.
