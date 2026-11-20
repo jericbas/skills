@@ -14,7 +14,7 @@ npx skills@latest add jericbas/skills -a claude-code
 
 - **CI**: [Test Failure Resolver](skills/ci/test-failure-resolver/SKILL.md)
 - **Depcruise**: [Dependency Cruiser](skills/depcruise/depcruise/SKILL.md), [Runner](skills/depcruise/depcruise-run/SKILL.md), [Setup](skills/depcruise/depcruise-setup/SKILL.md)
-- **Engineering**: [Generate Retro Spec](skills/engineering/generate-retro-spec/SKILL.md)
+- **Engineering**: [Generate Retro Spec](skills/engineering/generate-retro-spec/SKILL.md), [Skills Lifecycle](skills/engineering/skills-lifecycle/SKILL.md)
 - **Graphify**: [Agent Stats](skills/graphify/graphify-agents/SKILL.md), [Map](skills/graphify/graphify-map/SKILL.md), [Patch](skills/graphify/graphify-patch/SKILL.md), [Review](skills/graphify/graphify-review/SKILL.md), [Setup](skills/graphify/graphify-setup/SKILL.md)
 - **Madge**: [Madge](skills/madge/madge/SKILL.md), [Setup](skills/madge/madge-setup/SKILL.md)
 - **Personal**: [TeachMe](skills/personal/teachme/SKILL.md)
