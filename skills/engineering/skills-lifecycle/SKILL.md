@@ -1,7 +1,6 @@
 ---
 name: skills-lifecycle
 description: Audits, prunes, registers, and retires AI agent skills against token and line-budget limits (<= 120 lines). Use when adding a new skill, compacting bloated skills, or performing maintenance audits.
-disable-model-invocation: true
 ---
 
 # Trigger Command: /skills-lifecycle
