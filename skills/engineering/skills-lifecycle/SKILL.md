@@ -8,6 +8,9 @@ disable-model-invocation: true
 
 **Purpose:** Standardizes the acquisition, evaluation, pruning, registration, and retirement of AI agent skills across repositories and workspaces. It enforces strict token economy by keeping skills focused, modular, and within a <= 120-line budget to prevent context window bloat and attention degradation.
 
+## Strict Rule: User Confirmation Required
+Before making any changes to files (overwriting, editing, or compacting) or deleting skills, always ask the user for confirmation first with the proposed change or target path, and proceed only after approval.
+
 ## Instructions for the Agent:
 
 When executing the skills lifecycle protocol, select the appropriate operational mode:
@@ -22,7 +25,8 @@ Use when evaluating a newly installed skill or compacting an existing one.
    - **Strip:** Conversational intros, motivational prose, marketing fluff, multi-paragraph tutorials, verbose ASCII art, and repetitive code samples.
    - **Retain:** YAML frontmatter triggers/descriptions, exact CLI commands and argument flags, input/output contracts, and concise checklists.
 3. **Execution:**
-   - Generate a compact, drop-in replacement `SKILL.md` that preserves all functional capabilities under 120 lines.
+   - Generate a compact draft `SKILL.md` that preserves all functional capabilities under 120 lines.
+   - Present the proposed diff to the user and ask for confirmation before applying any changes to the file.
 
 ### 2. Mode 2: Discovery & Vetting Gate (`evaluate`)
 Use prior to installing community skills to verify quality and safety.
@@ -48,7 +52,8 @@ Use after installing or updating a skill to maintain visibility.
 
 ### 4. Mode 4: Deprecation & Retirement (`retire`)
 Use when a skill is superseded, redundant, or unused.
-1. **Removal:**
+1. **Confirmation & Removal:**
+   - Ask the user for confirmation first before removing any skill.
    - Uninstall through the CLI (works on every platform):
      ```bash
      npx skills remove [skill-name]
