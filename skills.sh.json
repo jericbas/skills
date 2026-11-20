@@ -22,7 +22,8 @@
       "title": "Engineering",
       "description": "Skills for engineering workflows.",
       "skills": [
-        "generate-retro-spec"
+        "generate-retro-spec",
+        "skills-lifecycle"
       ]
     },
     {
