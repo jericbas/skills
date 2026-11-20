@@ -22,6 +22,7 @@
       "title": "Engineering",
       "description": "Skills for engineering workflows.",
       "skills": [
+        "floorplan",
         "generate-retro-spec",
         "skills-lifecycle"
       ]
