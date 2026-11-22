@@ -339,7 +339,7 @@ if (fs.existsSync(customFile)) {
   }
   if (dropped) warn(`${dropped} step(s) in custom-flows.json point at code that no longer exists and were left out.`);
 }
-// "Start here" tour: 3-8 narrated stops (node id or file path), written by Claude in architecture.json
+// "Start here" tour: 3-8 narrated stops (node id or file path), written by the agent in architecture.json
 const outTour = [];
 if (arch.tour !== undefined) {
   if (!Array.isArray(arch.tour)) err('tour must be an array of { node, title, note }');
@@ -348,7 +348,7 @@ if (arch.tour !== undefined) {
     if (ref) outTour.push({ ref, title: isStr(s.title) ? s.title : '', note: isStr(s.note) ? s.note : '' });
   });
 }
-// "Recent work": what Claude just changed, per task, framed against what the user asked for
+// "Recent work": what the agent just changed, per task, framed against what the user asked for
 // (floorplan/recent-work.json, rewritten on every make/update). Stale refs are warnings, never errors.
 let outRecent = null;
 const recentFile = path.join(outDir, 'recent-work.json');
@@ -650,7 +650,7 @@ fs.writeFileSync(path.join(outDir, 'index.html'), html);
 // (and without the reasons on dismissed health issues, which are notes to self)
 const sharedHealth = graph.health?.dismissed ? { ...graph.health, dismissed: graph.health.dismissed.map(({ reason, ...d }) => d) } : graph.health;
 if (args.artifact) fs.writeFileSync(path.join(outDir, 'artifact.html'), page({ ...graph, ...(sharedHealth ? { health: sharedHealth } : {}), meta: { ...graph.meta, root: null, agent: 'claude' } }));
-// Self-contained helpers next to the map: ask questions through the Claude Code CLI or Codex (serve.mjs)
+// Self-contained helpers next to the map: ask questions through an agent CLI, Claude Code or Codex (serve.mjs)
 // and the graph lookups it hands to them (query.mjs). They need only Node, not this skill.
 fs.writeFileSync(path.join(outDir, 'query.mjs'), `${graphQuery}
 export { FLOORPLAN_ANSWER_SCHEMA, FLOORPLAN_FLOW_SCHEMA, FLOORPLAN_CHANGE_SCHEMA, floorplanAskInstructions, floorplanFlowInstructions, floorplanChangeInstructions, createGraphQuery };
